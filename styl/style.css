@@ -1,0 +1,1178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Надо запомнить */
+.wrapper {
+  width: 100%;
+  background: #000000;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 53%, rgba(23, 11, 0, 1) 100%);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+/* Надо запомнить */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo,
+footer .blocks .logo {
+  text-transform: uppercase;
+  font-size: clamp(20px, 2vw, 30px);
+  font-weight: 800;
+}
+
+header a {
+  color: #fff;
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+/* Надо запомнить */
+header nav ul li {
+  z-index: 2;
+}
+
+header nav ul li a {
+  color: #fff;
+}
+
+header nav ul li.active::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: #DC7000;
+  border-radius: 10px;
+  position: relative;
+  top: 10px;
+  left: -15px;
+
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+  border-bottom: 3px solid #DC7000;
+}
+
+header nav ul li.btn a,
+.btn-email {
+  background-color: #DC7000;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover,
+.btn-email:hover {
+  background-color: #6e3900;
+
+}
+
+.hero {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-info {
+  width: 530px;
+  padding-top: 70px;
+
+}
+
+.hero-info h2 {
+  color: #DC7000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hero-info h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.hero-info p {
+
+  font-weight: 500;
+  line-height: 170%;
+  margin: 30px 0;
+
+}
+
+.hero-info .btn,
+.hero-about .info .btn {
+  color: #fff;
+  background-color: #FA8305;
+  border-radius: 40px;
+  padding: 15px 30px;
+  border: 0;
+  font-size: 18px;
+  transition: all 500ms ease;
+}
+
+.hero-info .btn:hover,
+.hero-about .info .btn:hover,
+.gameText .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.hero img {
+  position: absolute;
+  top: -150px;
+  right: 0;
+}
+
+/* Секция с играми */
+.trending {
+  margin-top: 50px;
+}
+
+.see-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.trending h3 {
+  margin: auto 0px;
+  padding: 10px 0px;
+  padding-right: 25px;
+  font-weight: 600;
+  font-size: clamp(20px, 1vw + 1rem, 35px);
+  text-align: center;
+  
+}
+
+.trending .see-all {
+  display: flex;
+  color: #fff;
+  background-color: #25211D;
+  border-radius: 5px;
+  padding: 13px 23px;
+  font-size: clamp(10px, 1vw, 15px);
+  max-width: 150px;
+  transition: all 500ms ease;
+}
+
+.trending .see-all:hover {
+  transform: scale(1.1);
+}
+
+.trending .games {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 35px 0;
+  flex-wrap:wrap ;
+}
+
+.games .block {
+  padding-bottom: 20px;
+  padding: 15px;
+}
+
+.trending .games span {
+  font-size: 22px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: medium;
+  line-height: 187%;
+
+}
+
+.trending .games span img {
+  position: relative;
+  top: 5px;
+  margin-right: 7px;
+}
+
+.big-text {
+  padding: 50px 0;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  width: 800px;
+}
+
+.banner {
+  padding: 80px 0;
+  position: relative;
+}
+
+.banner h3 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 187%;
+  margin-bottom: 30px;
+}
+
+.banner p {
+  max-width: 545px;
+  width: 100%;
+  margin-bottom: 70px;
+  line-height: 187%;
+  font-size: 16px;
+
+}
+
+.banner .img {
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.banner .svg {
+  float: right;
+  position: absolute;
+  z-index: 1;
+  margin-right: 150px;
+  right: 14px;
+  top: 257px;
+}
+
+/* Секция с Изображением */
+.features {
+  background: url(/img/wallp.png) no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.features h3,
+.features p {
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.features h3 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.features .info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features .info .block {
+  text-align: center;
+  width: 20%;
+  margin: 30px 2%;
+}
+
+.features .info .block img {
+  margin: 35px 0px 25px 0px;
+}
+
+.projects {
+  padding: 80px 0;
+  max-width: 1200px;
+}
+
+.projects h3,
+.projects p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects h3 {
+  margin-top: 70px;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.projects p {
+  margin-bottom: 70px;
+  width: 500px;
+  font-size: 14px;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.se-all {
+  display: flex;
+  justify-content: center;
+}
+
+.projects .see-all {
+  text-align: center;
+  margin-top: 70px;
+  max-width: 140px;
+  color: #fff;
+  background-color: #25211D;
+  border-radius: 10px;
+  padding: 13px 23px;
+  display: block;
+  transition: all 500ms ease;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.projects .see-all:hover {
+  transform: scale(1.1);
+}
+
+/* email */
+.email {
+
+  padding: 80px 0;
+  margin: 150px auto;
+
+}
+
+.email h3 {
+  margin-top: 70px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 187%;
+  position: relative;
+  width: 50%;
+}
+
+.email p {
+  float: left;
+  width: 500px;
+  font-size: 14px;
+}
+
+.get-email {
+  background-color: #1C140F;
+  max-width: 1440px;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+.get-email p {
+  padding-top: 0px;
+  padding-left: 60px;
+}
+
+
+.mailbox {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.mailbox input {
+  width: 450px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  padding: 20px 105px 20px 20px;
+  position: relative;
+  right: -100px;
+  z-index: 1;
+  align-items: center;
+
+}
+
+.form-text {
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
+  padding-top: 40px;
+  padding-left: 60px;
+}
+
+.btn-email {
+  cursor: pointer;
+  border: none;
+  padding: 13px 17px;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+/* Страница Про Нас */
+.hero-about {
+  position: relative;
+}
+
+.hero-about .info {
+  width: 500px;
+  padding: 120px 0 250px;
+}
+
+.hero-about .info p {
+  width: 400px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 209%;
+}
+
+.hero-about .info a {
+  color: #fff;
+  width: 400px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 209%;
+}
+
+.hero-about .info p>span {
+  color: #E47500;
+}
+
+.hero-about .info p>a:hover {
+  color: #E47500;
+
+}
+
+.hero-about .info h1 {
+  width: 425px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  line-height: 180%;
+}
+
+
+.hero-about .info .btn {
+  margin-top: 20px;
+}
+
+.hero-about img {
+  position: absolute;
+  right: -150px;
+  top: 0;
+}
+
+/* Блок отзывов */
+.rewie h2 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 180%;
+  margin-bottom: 70px;
+}
+
+.rewie-blocks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.rewie-block {
+  width: 400px;
+  height: 350px;
+  background: #1C140F;
+  border-radius: 20px;
+}
+
+.rewie-block h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 187%;
+  margin: 0px 40px 15px;
+}
+
+.rewie-block p {
+  margin-inline: 40px 50px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 187%;
+
+}
+
+.rew-span {
+  text-align: center;
+  border-radius: 8px;
+  width: 140px;
+  height: 39px;
+  margin: 65px 40px 20px;
+  background: #B000DC11;
+  padding-top: 6px;
+}
+
+.rew-span.second {
+  background: #DC420011;
+}
+
+.rew-span.third {
+  background: #00DC8D11;
+}
+
+
+/* Блок описание */
+.desc {
+  background: #1C140F;
+}
+
+.des {
+  padding-top: 110px;
+}
+
+.des img {
+  margin-bottom: -8px;
+}
+
+.desc-text {
+  float: right;
+  width: 58%;
+}
+
+.desc-text .span {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 203%;
+}
+
+.desc-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 203%;
+  max-width: 530px;
+}
+
+.desc-text h2 {
+  max-width: 530px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 158%;
+  margin-bottom: 25px;
+}
+
+
+/* Блок с командой */
+.team h2 {
+  margin-top: 150px;
+  line-height: 180%;
+  margin-bottom: 70px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.teamsflex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.bockteam {
+  background: #1c140f;
+  border-radius: 20px;
+  width: 295px;
+  height: 253px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+/* Сервисный раздел */
+
+
+.services-text {
+  text-align: center;
+  position: relative;
+}
+
+.services-text p,
+a {
+  margin: 17px 0px;
+  line-height: 209%;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+}
+
+.services-text h2 {
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 180%;
+}
+
+.services-text p>span {
+  color: #E47500;
+}
+
+.services p>a:hover {
+  color: #E47500;
+}
+
+
+.sevices-blocks {
+  width: 1200px;
+  margin: auto;
+  padding: 35px 50px;
+  background: #1c140f;
+  border-radius: 10px;
+  min-height: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 150px;
+
+}
+
+.services .block {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.text-content h4 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 120%;
+
+}
+
+.text-content p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+/* Видео блок */
+.video.container {
+  height: 355px;
+  padding-right: 250px;
+  margin-bottom: 150px;
+}
+
+.video img {
+  border-radius: 16px;
+  max-width: 667px;
+  float: left;
+}
+
+.text-video {
+  float: right;
+}
+
+.text-video h2 {
+  max-width: 383px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 180%;
+  margin-left: 30px;
+}
+
+.text-video p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 187%;
+  max-width: 430px;
+  margin: 15px 0px 25px 30px;
+}
+
+.text-video ul {
+  margin: 15px 0px 0px 47px;
+}
+
+.text-video li {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 187%;
+  margin-top: 17px;
+}
+
+/* Описание игр */
+.firstgame {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 180px;
+  padding-right: 150px;
+}
+
+.firstgame.Sec {
+  flex-direction: row-reverse;
+}
+
+.gameText {
+  width: 540px;
+}
+
+.gameText h2 {
+  width: 470px;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.gameText p {
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 62px;
+}
+
+.gameText .btn {
+  color: #fff;
+  background-color: #FA8305;
+  border-radius: 0;
+  padding: 10px 40px;
+  border: 0;
+  font-size: 18px;
+  transition: all 500ms ease;
+}
+
+.firstgame img {
+  width: 490px;
+  height: auto;
+
+}
+
+/* Отзывы */
+
+
+.opinionwall {
+  background: #1C140F;
+  width: 100%;
+}
+
+.opinion>img {
+  width: 100%;
+}
+
+.opinionText {
+  text-align: center;
+  padding-top: 90px;
+  margin: 0 auto;
+}
+
+.opinionText h2 {
+  margin: auto;
+  width: 450px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 143%;
+}
+
+.opinionText p {
+  margin: auto;
+  width: 550px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 187%;
+  margin-bottom: 70px;
+}
+
+.opcards {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.opcards .reit {
+  display: flex;
+  gap: 7px;
+  padding-left: 70px;
+}
+
+.reit svg {
+  margin-top: 3px;
+}
+
+.card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 400px;
+  height: 230px;
+  padding: 30px;
+}
+
+.card.active {
+  border: 2px solid #DC7000;
+  background-color: #0F0901;
+  border-radius: 10px;
+  width: 400px;
+  height: 230px;
+  padding: 30px;
+}
+
+.opcardAvat {
+  display: flex;
+  gap: 10px;
+}
+
+.FIO p {
+  opacity: 0.2;
+}
+
+.cardText p {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 187%;
+}
+
+
+
+/* News */
+.servic input {
+  position: relative;
+  margin-top: 30px;
+  color: #fff;
+  background: #1C140F;
+  border: none;
+  border-radius: 10px;
+  width: 400px;
+  height: 49px;
+  padding: 0 60px;
+}
+
+.servic {
+  position: relative;
+}
+
+.servic img {
+  position: absolute;
+  top: 220px;
+  right: 880px;
+  opacity: 0.5;
+
+}
+
+.servic-text {
+  text-align: center;
+  position: relative;
+}
+
+.servic-text p,
+a {
+  margin: 17px 0px;
+  line-height: 209%;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+}
+
+.servic-text h2 {
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 180%;
+}
+
+.servic-text p>span {
+  color: #E47500;
+}
+
+.servic p>a:hover {
+  color: #E47500;
+}
+
+
+.servic-blocks {
+  width: 1200px;
+  margin: auto;
+  padding: 35px 50px;
+  background: #1c140f;
+  border-radius: 10px;
+  min-height: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 150px;
+
+}
+
+.servic .block {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 20px;
+
+}
+
+
+
+/* Footer */
+footer {
+  background: #000000;
+  padding: 50px 0;
+}
+
+footer .blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .blocks p {
+  width: 300px;
+  margin: 15px 0;
+}
+
+footer .blocks h4 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+footer .blocks ul {
+  list-style: none;
+}
+
+footer .blocks ul li {
+  margin-top: 7px;
+  opacity: 0.8;
+}
+
+footer hr {
+  margin: 30px 0;
+  border: 0;
+  height: 0.6px;
+  background: #524e4e;
+}
+
+footer>p {
+  text-align: center;
+}
+
+.footImg {
+  align-items: end;
+  align-self: flex-end;
+  width: 20%;
+}
+
+/* @media (max-width: 1500px){
+  .see-text{
+    width: fit-content;
+    padding-inline: 35px;
+  }
+  .trending h3 {
+    padding-inline: 0px 40px;
+  }
+  .trending .games {
+    width: 85%;
+    padding: 25px ;
+  }
+
+}
+@media (max-width: 1200px){
+  .trending .games {
+    flex-wrap: wrap;
+    width: 50%;
+  }
+  .trending h3{
+    padding-right: 25px;
+  }
+}
+@media (max-width: 780px){
+  .trending .games {
+    flex-wrap: wrap;
+    max-width: 40%;
+    margin-right: 25px;
+  }
+  .see-text{
+    flex-direction: column;
+    padding-inline: 35px;
+}
+}
+@media (max-width: 620px){
+  .trending .games {
+    flex-wrap: wrap;
+    max-width: 25%;
+    padding-right: 15px;
+  }
+} */
+/* .mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+} */
+
+@media (max-width: 1500px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  header nav ul {
+    gap: 40px;
+  }
+
+  .hero img {
+    position: absolute;
+    top: -150px;
+    right: -200px;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  header nav ul {
+    gap: 30px;
+  }
+
+  .hero img {
+    opacity: 0.2;
+  }
+
+  .hero-info p {
+    max-width: 410px;
+  }
+  .trending .games{
+    justify-content: space-around;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  /* .mobile-menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+  } */
+  header {
+    flex-wrap: wrap;
+  }
+  .logo{
+    padding-right: 70px;
+  }
+  nav ul {
+    padding-inline: 25px ;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-info {
+    width: 350px;
+    padding-top: 35px;
+  }
+
+  .hero-info h1 {
+    font-size: 35px;
+  }
+
+  .hero-info p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  header nav ul li.btn a{
+    padding: 6px 9px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .header {
+    padding: 15px 0;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .hero-info {
+    width: 90vw;
+    margin-top: 35px;
+  }
+
+  .hero-info h1 {
+    font-size: 35 px;
+  }
+
+  .hero-info p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  .trending .see-all {
+    margin: auto;
+  }
+  .trending h3{
+    margin: auto;
+  }
+
+}

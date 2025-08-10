@@ -593,7 +593,6 @@ a {
   margin-bottom: 150px;
   flex-wrap: wrap;
   gap: 2rem;
-  
 }
 
 .services .block {
@@ -627,7 +626,6 @@ a {
 .video img {
   border-radius: 16px;
 }
-
 
 .text-video h2 {
   max-width: 383px;
@@ -746,11 +744,14 @@ a {
   flex-wrap: wrap;
   gap: 2rem;
 }
+.fio-with-reit {
+  display: flex;
+  column-gap: 2rem;
+}
 
 .opcards .reit {
   display: flex;
   gap: 7px;
-  padding-left: 70px;
 }
 
 .reit svg {
@@ -986,7 +987,7 @@ footer > p {
   .text-video h2 {
     text-align: center;
   }
-  .opcards{
+  .opcards {
     justify-content: center;
   }
 }
@@ -1050,8 +1051,7 @@ footer > p {
 }
 
 @media (max-width: 768px) {
-
-    header {
+  header {
     flex-wrap: wrap;
   }
   .logo {
@@ -1097,7 +1097,7 @@ footer > p {
     width: 100%;
     row-gap: 2rem;
     justify-content: start;
-        border-bottom: 3px solid gray;
+    border-bottom: 3px solid gray;
   }
   .services .block img {
     padding-bottom: 15px;

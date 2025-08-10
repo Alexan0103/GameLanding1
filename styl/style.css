@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +8,8 @@
 html {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -24,6 +25,7 @@ body {
   font-weight: 400;
   color: #fff;
   font-size: 16px;
+  background: #000000;
 }
 
 a {
@@ -39,7 +41,11 @@ img {
   width: 100%;
   background: #000000;
   backdrop-filter: blur(14px);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 53%, rgba(23, 11, 0, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 53%,
+    rgba(23, 11, 0, 1) 100%
+  );
   overflow: hidden;
 }
 
@@ -47,7 +53,6 @@ img {
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
-
 }
 
 /* Надо запомнить */
@@ -90,25 +95,24 @@ header nav ul li a {
 }
 
 header nav ul li.active::after {
-  content: '';
+  content: "";
   display: block;
   width: 40px;
   height: 5px;
-  background-color: #DC7000;
+  background-color: #dc7000;
   border-radius: 10px;
   position: relative;
   top: 10px;
   left: -15px;
-
 }
 
 header nav ul li:not(.active):not(.btn) a:hover {
-  border-bottom: 3px solid #DC7000;
+  border-bottom: 3px solid #dc7000;
 }
 
 header nav ul li.btn a,
 .btn-email {
-  background-color: #DC7000;
+  background-color: #dc7000;
   padding: 9px 17px;
   border-radius: 5px;
   transition: all 500ms ease;
@@ -117,7 +121,6 @@ header nav ul li.btn a,
 header nav ul li.btn a:hover,
 .btn-email:hover {
   background-color: #6e3900;
-
 }
 
 .hero {
@@ -129,11 +132,10 @@ header nav ul li.btn a:hover,
 .hero-info {
   width: 530px;
   padding-top: 70px;
-
 }
 
 .hero-info h2 {
-  color: #DC7000;
+  color: #dc7000;
   font-size: 20px;
   font-weight: 600;
 }
@@ -144,17 +146,15 @@ header nav ul li.btn a:hover,
 }
 
 .hero-info p {
-
   font-weight: 500;
   line-height: 170%;
   margin: 30px 0;
-
 }
 
 .hero-info .btn,
 .hero-about .info .btn {
   color: #fff;
-  background-color: #FA8305;
+  background-color: #fa8305;
   border-radius: 40px;
   padding: 15px 30px;
   border: 0;
@@ -194,13 +194,12 @@ header nav ul li.btn a:hover,
   font-weight: 600;
   font-size: clamp(20px, 1vw + 1rem, 35px);
   text-align: center;
-  
 }
 
 .trending .see-all {
   display: flex;
   color: #fff;
-  background-color: #25211D;
+  background-color: #25211d;
   border-radius: 5px;
   padding: 13px 23px;
   font-size: clamp(10px, 1vw, 15px);
@@ -217,7 +216,7 @@ header nav ul li.btn a:hover,
   width: 100%;
   justify-content: space-between;
   padding: 35px 0;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
 }
 
 .games .block {
@@ -232,7 +231,6 @@ header nav ul li.btn a:hover,
   margin-top: 20px;
   font-weight: medium;
   line-height: 187%;
-
 }
 
 .trending .games span img {
@@ -267,7 +265,6 @@ header nav ul li.btn a:hover,
   margin-bottom: 70px;
   line-height: 187%;
   font-size: 16px;
-
 }
 
 .banner .img {
@@ -288,7 +285,7 @@ header nav ul li.btn a:hover,
 
 /* Секция с Изображением */
 .features {
-  background: url(/img/wallp.png) no-repeat center center fixed;
+  background: url(../img/wallp.png) no-repeat center center fixed;
   background-size: cover;
   padding: 80px 0;
 }
@@ -310,12 +307,15 @@ header nav ul li.btn a:hover,
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 2rem;
+  padding-inline: 25px;
 }
 
 .features .info .block {
   text-align: center;
   width: 20%;
-  margin: 30px 2%;
+  /* margin: 30px 2%; */
 }
 
 .features .info .block img {
@@ -346,9 +346,12 @@ header nav ul li.btn a:hover,
   font-size: 14px;
 }
 
-.images {
+.images,
+.images2 {
   display: flex;
   justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .se-all {
@@ -361,7 +364,7 @@ header nav ul li.btn a:hover,
   margin-top: 70px;
   max-width: 140px;
   color: #fff;
-  background-color: #25211D;
+  background-color: #25211d;
   border-radius: 10px;
   padding: 13px 23px;
   display: block;
@@ -372,78 +375,6 @@ header nav ul li.btn a:hover,
 
 .projects .see-all:hover {
   transform: scale(1.1);
-}
-
-/* email */
-.email {
-
-  padding: 80px 0;
-  margin: 150px auto;
-
-}
-
-.email h3 {
-  margin-top: 70px;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 187%;
-  position: relative;
-  width: 50%;
-}
-
-.email p {
-  float: left;
-  width: 500px;
-  font-size: 14px;
-}
-
-.get-email {
-  background-color: #1C140F;
-  max-width: 1440px;
-  max-height: 200px;
-  border-radius: 10px;
-}
-
-.get-email p {
-  padding-top: 0px;
-  padding-left: 60px;
-}
-
-
-.mailbox {
-  text-align: center;
-  padding-bottom: 50px;
-}
-
-.mailbox input {
-  width: 450px;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  padding: 20px 105px 20px 20px;
-  position: relative;
-  right: -100px;
-  z-index: 1;
-  align-items: center;
-
-}
-
-.form-text {
-  font-weight: 500;
-  font-size: 30px;
-  color: #fff;
-  padding-top: 40px;
-  padding-left: 60px;
-}
-
-.btn-email {
-  cursor: pointer;
-  border: none;
-  padding: 13px 17px;
-  position: relative;
-  z-index: 2;
-  border-radius: 10px;
 }
 
 /* Страница Про Нас */
@@ -473,13 +404,12 @@ header nav ul li.btn a:hover,
   line-height: 209%;
 }
 
-.hero-about .info p>span {
-  color: #E47500;
+.hero-about .info p > span {
+  color: #e47500;
 }
 
-.hero-about .info p>a:hover {
-  color: #E47500;
-
+.hero-about .info p > a:hover {
+  color: #e47500;
 }
 
 .hero-about .info h1 {
@@ -488,7 +418,6 @@ header nav ul li.btn a:hover,
   font-size: 30px;
   line-height: 180%;
 }
-
 
 .hero-about .info .btn {
   margin-top: 20px;
@@ -512,12 +441,15 @@ header nav ul li.btn a:hover,
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+  flex-wrap: wrap;
+  padding-inline: 15px;
+  gap: 2rem;
 }
 
 .rewie-block {
   width: 400px;
   height: 350px;
-  background: #1C140F;
+  background: #1c140f;
   border-radius: 20px;
 }
 
@@ -533,7 +465,6 @@ header nav ul li.btn a:hover,
   font-weight: 400;
   font-size: 13px;
   line-height: 187%;
-
 }
 
 .rew-span {
@@ -542,35 +473,33 @@ header nav ul li.btn a:hover,
   width: 140px;
   height: 39px;
   margin: 65px 40px 20px;
-  background: #B000DC11;
+  background: #b000dc11;
   padding-top: 6px;
 }
 
 .rew-span.second {
-  background: #DC420011;
+  background: #dc420011;
 }
 
 .rew-span.third {
-  background: #00DC8D11;
+  background: #00dc8d11;
 }
-
 
 /* Блок описание */
 .desc {
-  background: #1C140F;
+  background: #1c140f;
 }
 
 .des {
   padding-top: 110px;
-}
-
-.des img {
-  margin-bottom: -8px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5rem;
 }
 
 .desc-text {
-  float: right;
-  width: 58%;
+  padding-right: 150px;
 }
 
 .desc-text .span {
@@ -596,7 +525,6 @@ header nav ul li.btn a:hover,
   margin-bottom: 25px;
 }
 
-
 /* Блок с командой */
 .team h2 {
   margin-top: 150px;
@@ -610,6 +538,8 @@ header nav ul li.btn a:hover,
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .bockteam {
@@ -622,7 +552,6 @@ header nav ul li.btn a:hover,
 }
 
 /* Сервисный раздел */
-
 
 .services-text {
   text-align: center;
@@ -644,26 +573,27 @@ a {
   line-height: 180%;
 }
 
-.services-text p>span {
-  color: #E47500;
+.services-text p > span {
+  color: #e47500;
 }
 
-.services p>a:hover {
-  color: #E47500;
+.services p > a:hover {
+  color: #e47500;
 }
-
 
 .sevices-blocks {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   padding: 35px 50px;
   background: #1c140f;
   border-radius: 10px;
   min-height: 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 150px;
-
+  flex-wrap: wrap;
+  gap: 2rem;
+  
 }
 
 .services .block {
@@ -671,14 +601,12 @@ a {
   flex-direction: row-reverse;
   align-items: center;
   gap: 20px;
-
 }
 
 .text-content h4 {
   font-weight: 700;
   font-size: 25px;
   line-height: 120%;
-
 }
 
 .text-content p {
@@ -689,20 +617,17 @@ a {
 
 /* Видео блок */
 .video.container {
-  height: 355px;
-  padding-right: 250px;
+  min-height: 355px;
   margin-bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .video img {
   border-radius: 16px;
-  max-width: 667px;
-  float: left;
 }
 
-.text-video {
-  float: right;
-}
 
 .text-video h2 {
   max-width: 383px;
@@ -733,12 +658,17 @@ a {
 
 /* Описание игр */
 .firstgame {
-  height: 500px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 180px;
-  padding-right: 150px;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 10px;
+}
+.firstgame img {
+  height: auto;
+  padding: 7px;
 }
 
 .firstgame.Sec {
@@ -746,11 +676,12 @@ a {
 }
 
 .gameText {
-  width: 540px;
+  max-width: 500px;
+  height: auto;
 }
 
 .gameText h2 {
-  width: 470px;
+  max-width: 470px;
   font-weight: 500;
   font-size: 30px;
   margin-bottom: 40px;
@@ -764,7 +695,7 @@ a {
 
 .gameText .btn {
   color: #fff;
-  background-color: #FA8305;
+  background-color: #fa8305;
   border-radius: 0;
   padding: 10px 40px;
   border: 0;
@@ -772,22 +703,16 @@ a {
   transition: all 500ms ease;
 }
 
-.firstgame img {
-  width: 490px;
-  height: auto;
-
-}
-
 /* Отзывы */
 
-
 .opinionwall {
-  background: #1C140F;
+  background: #1c140f;
   width: 100%;
 }
 
-.opinion>img {
+.opinion > img {
   width: 100%;
+  height: auto;
 }
 
 .opinionText {
@@ -798,7 +723,7 @@ a {
 
 .opinionText h2 {
   margin: auto;
-  width: 450px;
+  max-width: 450px;
   margin-bottom: 25px;
   font-weight: 500;
   font-size: 35px;
@@ -807,7 +732,7 @@ a {
 
 .opinionText p {
   margin: auto;
-  width: 550px;
+  max-width: 550px;
   font-weight: 400;
   font-size: 14px;
   line-height: 187%;
@@ -818,6 +743,8 @@ a {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .opcards .reit {
@@ -833,21 +760,23 @@ a {
 .card {
   border: 2px solid #ddd;
   border-radius: 10px;
-  width: 400px;
-  height: 230px;
+  max-width: 400px;
+  max-height: auto;
   padding: 30px;
 }
 
 .card.active {
-  border: 2px solid #DC7000;
-  background-color: #0F0901;
+  border: 2px solid #dc7000;
+  background-color: #0f0901;
   border-radius: 10px;
-  width: 400px;
-  height: 230px;
+  max-width: 400px;
+  max-height: 230px;
   padding: 30px;
 }
 
 .opcardAvat {
+  max-width: 50px;
+  height: 50px;
   display: flex;
   gap: 10px;
 }
@@ -863,23 +792,28 @@ a {
   line-height: 187%;
 }
 
-
-
 /* News */
 .servic input {
   position: relative;
   margin-top: 30px;
   color: #fff;
-  background: #1C140F;
+  background: #ef6502;
+  color: black;
   border: none;
   border-radius: 10px;
-  width: 400px;
+  max-width: 400px;
   height: 49px;
-  padding: 0 60px;
+  padding: 0 40px;
 }
 
-.servic {
+.servic-text__icon {
   position: relative;
+}
+.servic-text__icon > svg {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  z-index: 100;
 }
 
 .servic img {
@@ -887,7 +821,6 @@ a {
   top: 220px;
   right: 880px;
   opacity: 0.5;
-
 }
 
 .servic-text {
@@ -910,14 +843,13 @@ a {
   line-height: 180%;
 }
 
-.servic-text p>span {
-  color: #E47500;
+.servic-text p > span {
+  color: #e47500;
 }
 
-.servic p>a:hover {
-  color: #E47500;
+.servic p > a:hover {
+  color: #e47500;
 }
-
 
 .servic-blocks {
   width: 1200px;
@@ -929,7 +861,6 @@ a {
   display: flex;
   justify-content: space-around;
   margin-bottom: 150px;
-
 }
 
 .servic .block {
@@ -937,10 +868,7 @@ a {
   flex-direction: row-reverse;
   align-items: center;
   gap: 20px;
-
 }
-
-
 
 /* Footer */
 footer {
@@ -951,6 +879,8 @@ footer {
 footer .blocks {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 footer .blocks p {
@@ -979,14 +909,14 @@ footer hr {
   background: #524e4e;
 }
 
-footer>p {
+footer > p {
   text-align: center;
 }
 
 .footImg {
   align-items: end;
   align-self: flex-end;
-  width: 20%;
+  display: flex;
 }
 
 /* @media (max-width: 1500px){
@@ -1049,6 +979,16 @@ footer>p {
     max-width: 100%;
     padding-inline: 50px;
   }
+  .video.container {
+    justify-content: center;
+    gap: 2rem;
+  }
+  .text-video h2 {
+    text-align: center;
+  }
+  .opcards{
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1065,11 +1005,30 @@ footer>p {
     top: -150px;
     right: -200px;
   }
+
+  .hero-about img {
+    opacity: 0.25;
+    z-index: 0;
+  }
+  .rewie-blocks {
+    justify-content: center;
+  }
+  .des {
+    justify-content: center;
+    text-align: center;
+  }
+  .desc-text {
+    padding-inline: 50px;
+  }
+  .teamsflex {
+    justify-content: center;
+  }
+  .firstgame {
+    justify-content: center;
+  }
 }
 
-
 @media (max-width: 900px) {
-
   header nav ul {
     gap: 30px;
   }
@@ -1081,38 +1040,25 @@ footer>p {
   .hero-info p {
     max-width: 410px;
   }
-  .trending .games{
+  .trending .games {
     justify-content: space-around;
   }
 
+  .stick {
+    display: none;
+  }
 }
-
 
 @media (max-width: 768px) {
 
-  /* .mobile-menu-toggle {
-    display: flex;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    z-index: 999;
-  } */
-  header {
+    header {
     flex-wrap: wrap;
   }
-  .logo{
+  .logo {
     padding-right: 70px;
   }
   nav ul {
-    padding-inline: 25px ;
+    padding-inline: 25px;
     gap: 10px;
     flex-wrap: wrap;
   }
@@ -1131,10 +1077,31 @@ footer>p {
     letter-spacing: 2px;
     font-weight: 300;
   }
-  header nav ul li.btn a{
+  header nav ul li.btn a {
     padding: 6px 9px;
   }
-
+  .banner .svg {
+    display: contents;
+  }
+  .images2 {
+    display: none;
+  }
+  .email {
+    margin-inline: 25px;
+  }
+  .mailbox input {
+    width: 300px;
+    width: 100%;
+  }
+  .services .block {
+    width: 100%;
+    row-gap: 2rem;
+    justify-content: start;
+        border-bottom: 3px solid gray;
+  }
+  .services .block img {
+    padding-bottom: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1171,8 +1138,7 @@ footer>p {
   .trending .see-all {
     margin: auto;
   }
-  .trending h3{
+  .trending h3 {
     margin: auto;
   }
-
 }
